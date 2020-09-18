@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .data {
+      height: 500px;
+      width: 80%;
+      background-color:antiquewhite; 
+      margin-left: 10%;
+      margin-top: 50px;
+      padding: 20px;
+      display: inline-block;
+      }
+      button {
+          padding: 10px;
+      }
+      input {
+          height: 40px;
+          text-indent: 20px;
+        }
+      .form {
+          margin-top: 20px;
+        }
+      th,
+      td {
+          height: 40px;
+          text-align: center;
+          padding: 5px;
+        }
+      .table {
+          width: 100%;
+          margin-top: 20px;
+        }
+    </style>    
+</head>
+<body>
+    <div class = "data">
+        <h1>Table</h1>
+        <div class="form">
+            <form onsubmit="addBus(event)">
+              <input type="text" required placeholder="name" id="name" />
+              <input type="text" required placeholder="source" id="src" />
+              <input type="text" required placeholder="destination" id="dest" />
+              <input type="number" required placeholder="Bus number" id="no" />
+              <input type="number" required placeholder="Passenger capacity" id = "capacity"/>
+              <button type="submit">Add Bus</button>
+            </form>
+        </div>
+        <div class="form">
+            <input type = "text" placeholder="search by source" id=searchplace onkeyup="searchBySource()"/>
+            <input type = "text" placeholder="search by destination" id=searchplace1 onkeyup="searchByDest()"/>
+        </div>
+        <table border="1" class="table" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Sr no</th>
+                    <th>Name</th>
+                    <th>source</th>
+                    <th>destination</th>
+                    <th>number</th>
+                    <th>passengerCapacity</th>
+                </tr>
+            </thead>
+            <tbody class="cbus" ></tbody>
+        </table>
+    </div>    
+    <script src = "ASSIG3ii.js"></script>
+</body> 
+</html>
